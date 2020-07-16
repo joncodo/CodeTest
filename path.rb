@@ -6,7 +6,7 @@ class Path
     @csv = CSV.read(file_name)
   end
 
-  def extract_history_sets
+  def extract_history_sets count=4
     
     sets_with_count = {}
     # sets_with_count["p1,p2,p3,p4"] = 1123

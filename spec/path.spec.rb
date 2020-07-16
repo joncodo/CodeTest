@@ -15,5 +15,11 @@ class PathTest < Minitest::Test
     path = Path.new
     csv = path.read_file('instructions.csv')
     assert_equal path.extract_history_sets, "p2p3p2p3"
+
+    path = Path.new
+    csv = path.read_file('instructions.csv')
+    assert_equal path.extract_history_sets(3), "p2p3p2p3"
   end
+
+
 end
