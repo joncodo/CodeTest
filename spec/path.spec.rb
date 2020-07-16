@@ -6,6 +6,8 @@ class PathTest < Minitest::Test
     path = Path.new
     assert_equal path.read_file("paths.csv")[0], ["p9", "p3", "p6"]
     assert_equal "p3p0p9p6", path.extract_sets
+    assert_equal "p9p3p0p9p6", path.extract_sets(5)
+    assert_equal "p10p10p1p3p6p8p2", path.extract_sets(7)
   end
 
   def test_extract_sets
@@ -39,11 +41,15 @@ class PathTest < Minitest::Test
     assert_equal 2, hash["foo"]
   end
 
-  def test_remove_first_key
+  def test_flatten_array
     path = Path.new
     hash = {}
-    new_key = path.remove_first_key "two"
-    assert_equal "o", new_key
+    new_key = path.flatten_array ['p1', 'p2']
+    assert_equal "p1p2", new_key
+    new_key = path.flatten_array ['p10', 'p2']
+    assert_equal "p10p2", new_key
+    new_key = path.flatten_array ['p198737', 'p2']
+    assert_equal "p198737p2", new_key
   end
 
 end
