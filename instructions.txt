@@ -1,0 +1,47 @@
+4 page paths
+
+Attached to this document is a file, paths2.txt
+
+Each line in the file represents a user's browsing history in a website in a single session.
+
+For example:
+A user visited page 1, then page 2, then page 1 again, then page 3. The line would be:
+p1,p2,p1,p3
+
+A 'path' is defined as a sequence of sequentially visited pages.
+
+Path Examples
+p2,p3 	  a "2-page path" consisting of page2 and page3
+p1,p2,p3     a “3-page path” consisting of page1, page2, page3
+p1,p7,p2,p1  a "4-page path" consisting of page1, page7, page2, and page1
+
+The task at hand is to write ruby code to find the most common 4-page path in paths2.txt.
+
+Example
+If the contents of the file are the following:
+
+p1,p2,p3,p2,p3,p2
+p2,p3,p2,p3
+p7,p4,p2,p3,p2,p3
+p2,p3
+p1,p3,p2,p3,p2
+p2,p3,p2,p5
+
+Then the most common 4-page path is: p2,p3,p2,p3 with 3 occurrences
+
+Bonus questions
+What is the most common N page path? (ex: what is the most common 5 page path? The most common 2 page path?)
+What are the Y most common N page paths? (ex: what are the top 4 most common 7-page paths)
+
+When you are finished
+Create a screencast talking through your code / solution and send to ryan@gocleary.com 
+In the email, please write the answers to the following questions
+What is the most common 4 page path?
+Bonus questions (if completed):
+What are the most common 5 and 7 page paths?
+What are the top 5 most common 4 page paths?
+
+You can use https://www.loom.com/ or https://www.screencastify.com/ to easily create a screencast.
+
+
+
